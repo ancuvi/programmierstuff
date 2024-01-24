@@ -3,17 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ihr Titel</title>
+    <title>Brocken Beat Crew</title>
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-r4NyP1gB+ZK+PlZ9snR+fvH1lbG4bWs3QmDhA0F6zzD6pPpoxx7n/dRE1+qE3zen"
-      crossorigin="anonymous"
     />
+    <style>
+      .hero-section {
+        position: relative;
+        height: 75vh; /* oder 100vh für volle Bildschirmhöhe */
+        background: url("IHRE-BILD-URL") no-repeat center center;
+        background-size: cover;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* schwarzes Overlay mit 50% Deckkraft */
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2; /* stellt sicher, dass der Text über dem Overlay liegt */
+        color: white;
+        text-align: center;
+        padding-top: 20%; /* Abstand von oben, anpassen nach Bedarf */
+      }
+      .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Dies stellt sicher, dass das Video den Container ohne Verzerrung ausfüllt */
+        z-index: 1; /* Setzen Sie das z-index niedriger als den Inhalt, aber höher als das Overlay */
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="#">Ihr Logo</a>
         <button
           class="navbar-toggler"
@@ -48,10 +83,58 @@
       </div>
     </nav>
 
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"
-      integrity="sha384-oesi62hXKJ3gkFbJRX5SbO3mgC7AHw5iveCqD6vRj/YiZABBtVVlpGXDRSdPdx6R"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Hero Sektion -->
+    <div class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="display-4">Broken Beat Crew</h1>
+        <p class="lead">
+          Entdecke die Dynamik des Breakdance – Leidenschaft mit jedem Move
+        </p>
+        <a href="#" class="btn btn-primary btn-lg" role="button">Contact Us</a>
+        <a href="#" class="btn btn-secondary btn-lg" role="button"
+          >Unsere Events</a
+        >
+      </div>
+      <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/y9vKd0dOC1s?si=D2ZJFwn56TN5Oold&autoplay=1&mute=1&controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- Event Section -->
+    <div class="container my-5">
+      <div class="row align-items-center">
+        <!-- Datum -->
+        <div class="col">
+          <div class="text-center">
+            <h2 class="fw-bold">20</h2>
+            <p class="text-secondary">Saturday</p>
+            <p>19:00</p>
+          </div>
+        </div>
+        <!-- Überschrift und Unterschrift -->
+        <div class="col">
+          <h4 class="fw-bold">The bright stream</h4>
+          <p class="text-secondary">Comic ballet in two acts</p>
+        </div>
+        <!-- Bild -->
+        <div class="col">
+          <img src="IHRE-BILD-URL" class="img-fluid" alt="Event Bild" />
+        </div>
+        <!-- Text -->
+        <div class="col">
+          <p>Music by Dmitri Shostakovich</p>
+          <p>Choreography by Alexei Ratmansky</p>
+          <p>Libretto by Adrian Piotrovsky</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
