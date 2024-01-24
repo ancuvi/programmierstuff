@@ -44,6 +44,11 @@
         object-fit: cover; /* Dies stellt sicher, dass das Video den Container ohne Verzerrung ausfüllt */
         z-index: 1; /* Setzen Sie das z-index niedriger als den Inhalt, aber höher als das Overlay */
       }
+      .team-member-img {
+        width: 150px; /* oder eine andere Größe, die zu Ihrem Design passt */
+        height: 150px;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -316,11 +321,11 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section py-5">
+    <section class="team-section py-5 bg-light">
       <div class="container">
         <h2 class="mb-4 text-center">Unser Team</h2>
         <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
-          <!-- Indicators/dots -->
+          <!-- Indicators -->
           <div class="carousel-indicators">
             <button
               type="button"
@@ -336,50 +341,80 @@
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
-            <button
-              type="button"
-              data-bs-target="#teamCarousel"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
             <!-- Add more buttons for more slides -->
           </div>
 
-          <!-- The slideshow/carousel -->
+          <!-- Slides -->
           <div class="carousel-inner">
+            <!-- Slide 1 -->
             <div class="carousel-item active">
-              <div class="row justify-content-center">
-                <div class="col-8 col-sm-6 col-md-4">
+              <div class="row text-center">
+                <div class="col-lg-4 mb-3">
                   <img
-                    src="pfad-zum-bild-mitglied-1.jpg"
-                    class="d-block w-100 rounded-circle"
+                    src="Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
                     alt="Team Mitglied 1"
                   />
-                  <h3>Mitglied 1</h3>
+                  <h5>Mitglied 1</h5>
                   <p>Position/Titel</p>
-                  <p>Kurze Beschreibung.</p>
                 </div>
-              </div>
-            </div>
-            <!-- Mehr Carousel Items für jedes Teammitglied hinzufügen -->
-            <div class="carousel-item">
-              <div class="row justify-content-center">
-                <div class="col-8 col-sm-6 col-md-4">
+                <div class="col-lg-4 mb-3">
                   <img
-                    src="pfad-zum-bild-mitglied-2.jpg"
-                    class="d-block w-100 rounded-circle"
+                    src="Images/Bilder/IMG_0003.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
                     alt="Team Mitglied 2"
                   />
-                  <h3>Mitglied 2</h3>
+                  <h5>Mitglied 2</h5>
                   <p>Position/Titel</p>
-                  <p>Kurze Beschreibung.</p>
                 </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="Images/Bilder/IMG_0005.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 3"
+                  />
+                  <h5>Mitglied 3</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <!-- Fügen Sie mehr Spalten für mehr Teammitglieder hinzu -->
               </div>
             </div>
-            <!-- Repeat for more team members -->
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row text-center">
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 1"
+                  />
+                  <h5>Mitglied 4</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="Images/Bilder/IMG_0003.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 2"
+                  />
+                  <h5>Mitglied 5</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="Images/Bilder/IMG_0005.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 3"
+                  />
+                  <h5>Mitglied 6</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <!-- Fügen Sie mehr Spalten für mehr Teammitglieder hinzu -->
+              </div>
+            </div>
           </div>
 
-          <!-- Left and right controls/icons -->
+          <!-- Carousel Controls -->
           <button
             class="carousel-control-prev"
             type="button"
@@ -405,11 +440,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-<!--
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.6141498952493!2d13.032340676722201!3d50.91235525399839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7424d472bcdf1%3A0x90dd6b9256840133!2sMartin-Luther-Gymnasium!5e0!3m2!1sde!2sde!4v1706128433938!5m2!1sde!2sde"
-                width="100%"
-                height="300"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy" 
--->
