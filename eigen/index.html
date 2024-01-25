@@ -8,89 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      .hero-section {
-        position: relative;
-        height: 75vh; /* oder 100vh für volle Bildschirmhöhe */
-        background: url("IHRE-BILD-URL") no-repeat center center;
-        background-size: cover;
-      }
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* schwarzes Overlay mit 50% Deckkraft */
-      }
-      .hero-content {
-        position: relative;
-        z-index: 2; /* stellt sicher, dass der Text über dem Overlay liegt */
-        color: white;
-        text-align: center;
-        padding-top: 20%; /* Abstand von oben, anpassen nach Bedarf */
-      }
-      .hero-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Dies stellt sicher, dass das Video den Container ohne Verzerrung ausfüllt */
-        z-index: 1; /* Setzen Sie das z-index niedriger als den Inhalt, aber höher als das Overlay */
-      }
-      .team-member-img {
-        width: 150px; /* oder eine andere Größe, die zu Ihrem Design passt */
-        height: 150px;
-        object-fit: cover;
-      }
-      .custom-margin {
-        margin-top: 6rem;
-        margin-bottom: 6rem;
-      }
-      .custom-margin-footer {
-        margin-top: 6rem;
-      }
-      .navbar {
-        transition: opacity 0.3s ease-in-out; /* sanfter Übergang für Opacity */
-      }
-      .navbar-fixed {
-        position: fixed;
-        top: -100;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.9); /* Leicht transparentes Weiß */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        opacity: 0; /* Starten mit einer Opazität von 0 */
-        transition: top 0.3s ease-in, opacity 0.3s ease-in-out; /* sanfter Übergang für Opacity und Top */
-      }
-      .navbar-visible {
-        top: 0;
-        opacity: 1; /* Volle Opazität, wenn sichtbar */
-      }
-      .navbar-placeholder {
-        display: none; /* Standardmäßig nicht anzeigen */
-        height: 0; /* Anfangshöhe */
-      }
-      .navbar-fixed + .navbar-placeholder {
-        display: block;
-        height: 56px; /* Setzen Sie hier die tatsächliche Höhe Ihrer Navbar ein */
-      }
-      <style>
-  .about-us-section {
-    background-image: url(''); /* Pfad zum Hintergrundbild */
-    background-size: cover; /* Das Bild deckt den gesamten Bereich ab */
-    background-position: center; /* Zentriert das Bild */
-    background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-  }
-</style>
-
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -155,7 +73,7 @@
     </div>
 
     <!-- Event Sektion-->
-    <div class="container custom-margin">
+    <div class="container custom-padding">
       <!-- Event 1 -->
 
       <div class="row align-items-center">
@@ -286,7 +204,7 @@
     </div>
 
     <!-- About Us Section -->
-    <section class="about-us-section bg-light py-5 custom-margin">
+    <section class="about-us-section custom-padding text-white">
       <div class="container">
         <div class="row">
           <div class="col-md-6 my-auto">
@@ -304,7 +222,7 @@
               Workshops bis hin zu nationalen Wettbewerben, wir leben unseren
               Traum und inspirieren die nächste Generation von Tänzern.
             </p>
-            <a href="#" class="btn btn-outline-primary">Lerne uns kennen</a>
+            <a href="#" class="btn btn-orange">Lerne uns kennen</a>
           </div>
           <div class="col-md-6">
             <div class="about-us-img-container">
@@ -320,7 +238,7 @@
     </section>
 
     <!-- Workshops Section -->
-    <section class="workshops-section py-5 custom-margin">
+    <section class="workshops-section custom-padding bg-light">
       <div class="container">
         <h2 class="mb-4 text-center">Unsere Workshops</h2>
         <div class="row">
@@ -365,7 +283,7 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section py-5 custom-margin bg-light">
+    <section class="team-section custom-padding">
       <div class="container">
         <h2 class="mb-4 text-center">Unser Team</h2>
         <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -482,7 +400,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section py-5 custom-margin">
+    <section class="faq-section custom-padding bg-light">
       <div class="container">
         <h2 class="mb-4 text-center">Häufig gestellte Fragen</h2>
 
@@ -565,7 +483,7 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-white pt-4 pb-2 custom-margin-footer">
+    <footer class="bg-dark text-white pt-4 pb-2 custom-padding-footer">
       <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
           <!-- Über Uns -->
