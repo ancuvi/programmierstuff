@@ -6,202 +6,591 @@
     <title>test</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
     />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="background">
-        <img
-          src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132206/news-slider/background.webp"
-          alt=""
-        />
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ihr Logo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="item-bg"></div>
+    </nav>
+    <!-- Platzhalter-Element -->
+    <div class="navbar-placeholder"></div>
 
-      <div class="news-slider">
-        <div class="news-slider__wrp swiper-wrapper">
-          <div class="news-slider__item swiper-slide">
-            <a href="#" class="news__item">
-              <div class="news-date">
-                <span class="news-date__title">24</span>
-                <span class="news-date__txt">May</span>
-              </div>
-              <div class="news__title">Lorem Ipsum Dolor Sit Amed</div>
+    <!-- Hero Sektion -->
+    <div class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="display-4">Broken Beat Crew</h1>
+        <p class="lead">
+          Entdecke die Dynamik des Breakdance – Leidenschaft mit jedem Move
+        </p>
+        <a href="#" class="btn btn-primary btn-lg" role="button">Contact Us</a>
+        <a href="#" class="btn btn-secondary btn-lg" role="button"
+          >Unsere Events</a
+        >
+      </div>
+      <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/y9vKd0dOC1s?si=D2ZJFwn56TN5Oold&autoplay=1&mute=1&controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-              <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
-              </p>
+    <!-- Event Sektion-->
+    <div class="container custom-padding">
+      <!-- Event 1 -->
 
-              <div class="news__img">
-                <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-2.webp"
-                  alt="news"
-                />
-              </div>
-            </a>
-          </div>
-
-          <div class="news-slider__item swiper-slide">
-            <a href="#" class="news__item">
-              <div class="news-date">
-                <span class="news-date__title">25</span>
-                <span class="news-date__txt">May</span>
-              </div>
-              <div class="news__title">Lorem Ipsum Dolor Sit Amed</div>
-
-              <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
-              </p>
-
-              <div class="news__img">
-                <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-3.webp"
-                  alt="news"
-                />
-              </div>
-            </a>
-          </div>
-
-          <div class="news-slider__item swiper-slide">
-            <a href="#" class="news__item">
-              <div class="news-date">
-                <span class="news-date__title">26</span>
-                <span class="news-date__txt">May</span>
-              </div>
-              <div class="news__title">Lorem Ipsum Dolor Sit Amed</div>
-
-              <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
-              </p>
-
-              <div class="news__img">
-                <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp"
-                  alt="news"
-                />
-              </div>
-            </a>
-          </div>
-
-          <div class="news-slider__item swiper-slide">
-            <a href="#" class="news__item">
-              <div class="news-date">
-                <span class="news-date__title">27</span>
-                <span class="news-date__txt">May</span>
-              </div>
-              <div class="news__title">Lorem Ipsum Dolor Sit Amed</div>
-
-              <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
-              </p>
-
-              <div class="news__img">
-                <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-2.webp"
-                  alt="news"
-                />
-              </div>
-            </a>
-          </div>
-
-          <div class="news-slider__item swiper-slide">
-            <a href="#" class="news__item">
-              <div class="news-date">
-                <span class="news-date__title">28</span>
-                <span class="news-date__txt">May</span>
-              </div>
-              <div class="news__title">Lorem Ipsum Dolor Sit Amed</div>
-
-              <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
-              </p>
-
-              <div class="news__img">
-                <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-5.webp"
-                  alt="news"
-                />
-              </div>
-            </a>
-          </div>
-
-          <div class="news-slider__item swiper-slide">
-            <a href="#" class="news__item">
-              <div class="news-date">
-                <span class="news-date__title">29</span>
-                <span class="news-date__txt">May</span>
-              </div>
-              <div class="news__title">Lorem Ipsum Dolor Sit Amed</div>
-
-              <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s...
-              </p>
-
-              <div class="news__img">
-                <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp"
-                  alt="news"
-                />
-              </div>
-            </a>
+      <div class="row align-items-center">
+        <!-- Datum -->
+        <div class="col">
+          <div class="text-center">
+            <h2 class="fw-bold">20</h2>
+            <p class="text-secondary">Saturday</p>
+            <p>19:00</p>
           </div>
         </div>
+        <!-- Überschrift und Unterschrift -->
+        <div class="col">
+          <h4 class="fw-bold">The bright stream</h4>
+          <p class="text-secondary">Comic ballet in two acts</p>
+        </div>
+        <!-- Bild -->
+        <div class="col">
+          <img
+            src="assets/Images/Bilder/IMG_0002.jpg"
+            class="img-fluid"
+            alt="Event Bild"
+          />
+        </div>
+        <!-- Text -->
+        <div class="col">
+          <p>Music by Dmitri Shostakovich</p>
+          <p>Choreography by Alexei Ratmansky</p>
+          <p>Libretto by Adrian Piotrovsky</p>
+        </div>
+      </div>
 
-        <div class="news-slider__ctr">
-          <div class="news-slider__arrows">
-            <button class="news-slider__arrow news-slider-prev">
-              <span class="icon-font">
-                <svg class="icon icon-arrow-left">
-                  <use xlink:href="#icon-arrow-left"></use>
-                </svg>
-              </span>
-            </button>
-            <button class="news-slider__arrow news-slider-next">
-              <span class="icon-font">
-                <svg class="icon icon-arrow-right">
-                  <use xlink:href="#icon-arrow-right"></use>
-                </svg>
-              </span>
-            </button>
+      <!-- Event 2-->
+
+      <div class="row align-items-center">
+        <!-- Datum -->
+        <div class="col">
+          <div class="text-center">
+            <h2 class="fw-bold">20</h2>
+            <p class="text-secondary">Saturday</p>
+            <p>19:00</p>
           </div>
+        </div>
+        <!-- Überschrift und Unterschrift -->
+        <div class="col">
+          <h4 class="fw-bold">The bright stream</h4>
+          <p class="text-secondary">Comic ballet in two acts</p>
+        </div>
+        <!-- Text -->
+        <div class="col">
+          <p>Music by Dmitri Shostakovich</p>
+          <p>Choreography by Alexei Ratmansky</p>
+          <p>Libretto by Adrian Piotrovsky</p>
+        </div>
+        <!-- Bild -->
+        <div class="col">
+          <img
+            src="assets/Images/Bilder/IMG_0002.jpg"
+            class="img-fluid"
+            alt="Event Bild"
+          />
+        </div>
+      </div>
 
-          <div class="news-slider__pagination"></div>
+      <!-- Event 3 -->
+
+      <div class="row align-items-center">
+        <!-- Datum -->
+        <div class="col">
+          <div class="text-center">
+            <h2 class="fw-bold">20</h2>
+            <p class="text-secondary">Saturday</p>
+            <p>19:00</p>
+          </div>
+        </div>
+        <!-- Überschrift und Unterschrift -->
+        <div class="col">
+          <h4 class="fw-bold">The bright stream</h4>
+          <p class="text-secondary">Comic ballet in two acts</p>
+        </div>
+        <!-- Bild -->
+        <div class="col">
+          <img
+            src="assets/Images/Bilder/IMG_0002.jpg"
+            class="img-fluid"
+            alt="Event Bild"
+          />
+        </div>
+        <!-- Text -->
+        <div class="col">
+          <p>Music by Dmitri Shostakovich</p>
+          <p>Choreography by Alexei Ratmansky</p>
+          <p>Libretto by Adrian Piotrovsky</p>
+        </div>
+      </div>
+
+      <!-- Event 4-->
+
+      <div class="row align-items-center">
+        <!-- Datum -->
+        <div class="col">
+          <div class="text-center">
+            <h2 class="fw-bold">20</h2>
+            <p class="text-secondary">Saturday</p>
+            <p>19:00</p>
+          </div>
+        </div>
+        <!-- Überschrift und Unterschrift -->
+        <div class="col">
+          <h4 class="fw-bold">The bright stream</h4>
+          <p class="text-secondary">Comic ballet in two acts</p>
+        </div>
+        <!-- Text -->
+        <div class="col">
+          <p>Music by Dmitri Shostakovich</p>
+          <p>Choreography by Alexei Ratmansky</p>
+          <p>Libretto by Adrian Piotrovsky</p>
+        </div>
+        <!-- Bild -->
+        <div class="col">
+          <img
+            src="assets/Images/Bilder/IMG_0002.jpg"
+            class="img-fluid"
+            alt="Event Bild"
+          />
         </div>
       </div>
     </div>
 
-    <svg hidden="hidden">
-      <defs>
-        <symbol id="icon-arrow-left" viewBox="0 0 32 32">
-          <title>arrow-left</title>
-          <path
-            d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"
-          ></path>
-        </symbol>
-        <symbol id="icon-arrow-right" viewBox="0 0 32 32">
-          <title>arrow-right</title>
-          <path
-            d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"
-          ></path>
-        </symbol>
-      </defs>
-    </svg>
+    <!-- About Us Section -->
+    <section class="about-us-section custom-padding text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 my-auto">
+            <h2 class="mb-3">Wer wir sind</h2>
+            <p class="mb-3">
+              Die Brocken Beat Crew steht für mehr als nur Tanzschritte - wir
+              verkörpern den Geist des Breakdance und dessen transformative
+              Kraft. Unsere Crew, gegründet im Herzen der Stadt, ist eine
+              Familie von Individualisten, die durch die Rhythmen der Straße
+              vereint sind.
+            </p>
+            <p class="mb-3">
+              Unser Weg ist geprägt von Leidenschaft, Disziplin und dem
+              unermüdlichen Streben, unsere Kunst weiterzugeben. Von lokalen
+              Workshops bis hin zu nationalen Wettbewerben, wir leben unseren
+              Traum und inspirieren die nächste Generation von Tänzern.
+            </p>
+            <a href="#" class="btn btn-orange">Lerne uns kennen</a>
+          </div>
+          <div class="col-md-6">
+            <div class="about-us-img-container">
+              <img
+                src="assets/Images/Bilder/IMG_0002.jpg"
+                alt="Breakdance Performance"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="workshops-section custom-padding bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-center">Unsere Workshops</h2>
+        <div class="row">
+          <!-- Standort 1 -->
+          <div class="col-md-6 mb-3">
+            <div class="map-container mb-3">
+              <!-- Ersetzen Sie den Link mit dem Einbettungslink von Google Maps für Ihren ersten Standort -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.6141498952493!2d13.032340676722201!3d50.91235525399839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7424d472bcdf1%3A0x90dd6b9256840133!2sMartin-Luther-Gymnasium!5e0!3m2!1sde!2sde!4v1706128433938!5m2!1sde!2sde"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <h4>Standort Stadtzentrum</h4>
+            <p>Beispielstraße 1, 12345 Stadtname</p>
+            <p>Jeden Samstag, 14:00 - 16:00 Uhr</p>
+          </div>
+          <!-- Standort 2 -->
+          <div class="col-md-6 mb-3">
+            <div class="map-container mb-3">
+              <!-- Ersetzen Sie den Link mit dem Einbettungslink von Google Maps für Ihren zweiten Standort -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.6141498952493!2d13.032340676722201!3d50.91235525399839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a7424d472bcdf1%3A0x90dd6b9256840133!2sMartin-Luther-Gymnasium!5e0!3m2!1sde!2sde!4v1706128433938!5m2!1sde!2sde"
+                width="100%"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <h4>Standort Nordviertel</h4>
+            <p>Beispielpark Allee 5, 67890 Anderstadt</p>
+            <p>Jeden Sonntag, 10:00 - 12:00 Uhr</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section custom-padding">
+      <div class="container">
+        <h2 class="mb-4 text-center">Unser Team</h2>
+        <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#teamCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#teamCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <!-- Add more buttons for more slides -->
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row text-center">
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="assets/Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 1"
+                  />
+                  <h5>Mitglied 1</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="assets/Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 2"
+                  />
+                  <h5>Mitglied 2</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="assets/Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 3"
+                  />
+                  <h5>Mitglied 3</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <!-- Fügen Sie mehr Spalten für mehr Teammitglieder hinzu -->
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row text-center">
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="assets/Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 1"
+                  />
+                  <h5>Mitglied 4</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="assets/Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 2"
+                  />
+                  <h5>Mitglied 5</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <div class="col-lg-4 mb-3">
+                  <img
+                    src="assets/Images/Bilder/IMG_0002.jpg"
+                    class="rounded-circle mx-auto d-block team-member-img"
+                    alt="Team Mitglied 3"
+                  />
+                  <h5>Mitglied 6</h5>
+                  <p>Position/Titel</p>
+                </div>
+                <!-- Fügen Sie mehr Spalten für mehr Teammitglieder hinzu -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#teamCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Vorheriges</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#teamCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Nächstes</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section custom-padding bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-center">Häufig gestellte Fragen</h2>
+
+        <div class="accordion mx-auto" id="faqAccordion" style="max-width: 50%">
+          <!-- Frage 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Frage 1
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">Antwort auf Frage 1.</div>
+            </div>
+          </div>
+
+          <!-- Frage 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Frage 2
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">Antwort auf Frage 2.</div>
+            </div>
+          </div>
+
+          <!-- Frage 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Frage 3
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">Antwort auf Frage 3.</div>
+            </div>
+          </div>
+
+          <!-- Weitere Fragen hinzufügen -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white pt-4 pb-2 custom-padding-footer">
+      <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+          <!-- Über Uns -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">
+              Brocken Beat Crew
+            </h5>
+            <p>
+              Hier können Sie Informationen über Ihre Breakdance-Crew einfügen,
+              wie z.B. Ihre Mission und Vision.
+            </p>
+          </div>
+
+          <!-- Nützliche Links -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">
+              Nützliche Links
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Ihre Veranstaltungen</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Workshops</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Über Uns</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Team</a
+              >
+            </p>
+          </div>
+
+          <!-- Kontakte -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Kontakt</h5>
+            <p><i class="fas fa-home mr-3"></i> Adresse, Straße, Stadt</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Folgen Sie uns</h5>
+            <!-- Add social media icons -->
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+
+        <div class="row align-items-center">
+          <div class="col-md-7 col-lg-8">
+            <p>&copy; 2024 Brocken Beat Crew. Alle Rechte vorbehalten.</p>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="col-md-5 col-lg-4">
+            <div class="text-center text-md-right">
+              <!-- Icons -->
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a
+                    href="#"
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="#"
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="#"
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                    ><i class="fab fa-google-plus"></i
+                  ></a>
+                </li>
+                <!-- Weitere Icons hinzufügen, falls gewünscht -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script type="module" src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
   </body>
 </html>
