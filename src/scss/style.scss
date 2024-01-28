@@ -1,213 +1,111 @@
-@import "test";
+//@import "test";
+@import "colors";
 
-.hero-section {
-  position: relative;
-  height: 75vh; // oder 100vh für volle Bildschirmhöhe
-  background: url("IHRE-BILD-URL") no-repeat center center;
+$light_blue: hsl(200, 100%, 91%);
+$blue: hsl(200, 100%, 50%);
+$dark_blue: hsl(200, 100%, 6%);
+$success: hsl(100, 60%, 50%);
+$error: hsl(0, 60%, 50%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+}
+.full-screen-container {
+  background-image: url(./../assets/Images/Bilder/IMG_0002.jpg);
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
-
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); // schwarzes Overlay mit 50% Deckkraft
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2; // stellt sicher, dass der Text über dem Overlay liegt
-    color: white;
-    text-align: center;
-    padding-top: 20%; // Abstand von oben, anpassen nach Bedarf
-  }
-
-  .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; // Dies stellt sicher, dass das Video den Container ohne Verzerrung ausfüllt
-    z-index: 1; // Setzen Sie das z-index niedriger als den Inhalt, aber höher als das Overlay
-  }
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.team-member-img {
-  width: 150px; // oder eine andere Größe, die zu Ihrem Design passt
-  height: 150px;
-  object-fit: cover;
+.login-container {
+  $dark_blue_complete: rgba(
+    $color: $dark_blue,
+    $alpha: 0.7,
+  );
+  background-color: $dark_blue_complete;
+  box-shadow: 0 0 15px 0 $dark_blue_complete;
+  padding: 40px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
 }
-
-.custom-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.custom-padding-footer {
-  padding-top: 6rem;
-}
-
-.navbar {
-  transition: opacity 0.3s ease-in-out; // sanfter Übergang für Opacity
-
-  &-fixed {
-    position: fixed;
-    top: -100;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9); // Leicht transparentes Weiß
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    opacity: 0; // Starten mit einer Opazität von 0
-    transition: top 0.3s ease-in, opacity 0.3s ease-in-out; // sanfter Übergang für Opacity und Top
-
-    & + .navbar-placeholder {
-      display: block;
-      height: 56px; // Setzen Sie hier die tatsächliche Höhe Ihrer Navbar ein
-    }
-  }
-
-  &-visible {
-    top: 0;
-    opacity: 1; // Volle Opazität, wenn sichtbar
-  }
-}
-
-.navbar-placeholder {
-  display: none; // Standardmäßig nicht anzeigen
-  height: 0; // Anfangshöhe
-}
-
-.about-us-section {
-  background-image: url(assets/Images/Julien_blau_BG.png); // Pfad zum Hintergrundbild
-  background-size: cover; // Das Bild deckt den gesamten Bereich ab
-  background-position: center; // Zentriert das Bild
-  background-repeat: no-repeat; // Verhindert das Wiederholen des Bildes
-}
-
-.btn-orange {
-  background-color: orange; // Oder einen spezifischen Orangeton
-  color: white; // Weißer Text auf dem Button
-  border: none; // Entfernt die Standardgrenze
-
-  &:hover {
-    background-color: darkorange; // Dunklerer Orangeton beim Hover
-    color: white;
-  }
-}
-
-.faq-section {
-  background: #fdfdfd;
-  min-height: 100vh;
-  padding: 10vh 0 0;
-}
-.faq-title h2 {
-  position: relative;
-  margin-bottom: 45px;
-  display: inline-block;
-  font-weight: 600;
-  line-height: 1;
-}
-.faq-title h2::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 60px;
-  height: 2px;
-  background: #e91e63;
-  bottom: -25px;
-  margin-left: -30px;
-}
-.faq-title p {
-  padding: 0 190px;
-  margin-bottom: 10px;
-}
-
-.faq {
-  background: #ffffff;
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
-}
-
-.faq .card {
-  border: none;
-  background: none;
-  border-bottom: 1px dashed #cee1f8;
-}
-
-.faq .card .card-header {
-  padding: 0px;
-  border: none;
-  background: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.faq .card .card-header:hover {
-  background: rgba(233, 30, 99, 0.1);
-  padding-left: 10px;
-}
-.faq .card .card-header .faq-title {
-  width: 100%;
-  text-align: left;
-  padding: 0px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 1px;
-  color: #3b566e;
-  text-decoration: none !important;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.faq .card .card-header .faq-title .badge {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 14px;
-  float: left;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
+.login-title {
+  margin: 0;
+  color: white;
   text-align: center;
-  background: #e91e63;
-  color: #fff;
-  font-size: 12px;
-  margin-right: 20px;
+  font-size: 2rem;
+  font-weight: normal;
 }
-
-.faq .card .card-body {
-  padding: 30px;
-  padding-left: 35px;
-  padding-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  color: #6f8ba4;
-  line-height: 28px;
-  letter-spacing: 1px;
-  border-top: 1px solid #f3f8ff;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
 }
-
-.faq .card .card-body p {
-  margin-bottom: 14px;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
-
-@media (max-width: 991px) {
-  .faq {
-    margin-bottom: 30px;
-  }
-  .faq .card .card-header .faq-title {
-    line-height: 26px;
-    margin-top: 10px;
-  }
+.input-group label {
+  color: white;
+  font-weight: lighter;
+}
+.input-group input {
+  font-size: 1.25rem;
+  padding: 0.5em;
+  background-color: rgba($color: $light_blue, $alpha: 0.3);
+  border: none;
+  outline: none;
+  border-radius: 0.25em;
+  color: white;
+  font-weight: lighter;
+}
+.input-group.success input {
+  box-shadow: 0 0 0 1px $success;
+}
+.input-group.error input {
+  box-shadow: 0 0 0 1px $error;
+}
+.input-group input:focus {
+  //muss unter success und error stehen sonst funktioniert es nicht
+  box-shadow: 0 0 0 1px $blue; //wenn ich das mit border 1px machen würde, würde sich alles ein bisschen verschieben weil ein zusätzlicher px dazu kommt
+}
+.input-group .msg {
+  display: none;
+  font-size: 0.75rem;
+}
+.input-group.success .msg,
+.input-group.error .msg {
+  display: block;
+}
+.input-group.success .msg {
+  color: $success;
+}
+.input-group.error .msg {
+  color: $error;
+}
+.login-button {
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: white;
+  background-color: rgba($color: $blue, $alpha: 0.25);
+  border: 1px solid $blue;
+  border-radius: 0.25em;
+  outline: none;
+  cursor: pointer;
+}
+.login-button:hover,
+.login-button:focus {
+  background-color: rgba($color: $blue, $alpha: 0.4);
 }
