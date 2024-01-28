@@ -6,29 +6,33 @@
     <title>übung</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #container {
+        width: 100%;
+        height: 100vh;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        padding: 10px 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <div class="full-screen-container">
-      <div class="login-container">
-        <h1 class="login-title">Welcome</h1>
-        <form class="form">
-          <div class="input-group success">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-            <span class="msg">Valid email is required</span>
-          </div>
-
-          <div class="input-group error">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
-            <span class="msg">incorrect password</span>
-          </div>
-
-          <button type="submit" class="login-button">Login</button>
-        </form>
-      </div>
+    <div id="container">
+      <button id="btn" ;>Click here!</button>
     </div>
+    <script>
+      let btn = document.getElementById("btn");
 
+      addEventListener;
+    </script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
