@@ -12,6 +12,11 @@ $error: hsl(0, 60%, 50%);
 *::after {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 body {
   margin: 0;
