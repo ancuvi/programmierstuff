@@ -15,31 +15,37 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div id="resultArea">1234</div>
+    <div id="resultArea"></div>
     <table>
       <tr>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td class="highlight">/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td onclick="deleteLast()">DEL</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td class="highlight">x</td>
+        <td onclick="appandOperation(7)">7</td>
+        <td onclick="appandOperation(6)">8</td>
+        <td onclick="appandOperation(9)">9</td>
+        <td class="highlight" onclick="appandOperation(' / ')">/</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td class="highlight">+</td>
+        <td onclick="appandOperation(4)">4</td>
+        <td onclick="appandOperation(5)">5</td>
+        <td onclick="appandOperation(6)">6</td>
+        <td class="highlight" onclick="appandOperation(' * ')">x</td>
       </tr>
       <tr>
-        <td>0</td>
-        <td>.</td>
-        <td id="result">=</td>
-        <td class="highlight">-</td>
+        <td onclick="appandOperation(1)">1</td>
+        <td onclick="appandOperation(2)">2</td>
+        <td onclick="appandOperation(3)">3</td>
+        <td class="highlight" onclick="appandOperation(' + ')">+</td>
+      </tr>
+      <tr>
+        <td onclick="appandOperation(0)">0</td>
+        <td onclick="appandOperation('.')">.</td>
+        <td onclick="calculateResult()" id="result">=</td>
+        <td class="highlight" onclick="appandOperation(' - ')">-</td>
       </tr>
     </table>
 

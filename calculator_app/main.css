@@ -22,7 +22,7 @@ td:hover {
   cursor: pointer;
 }
 #resultArea {
-  position: flex; /*damit ich den inhalt auf der x und y Achse verschieben kann*/
+  display: flex; /*damit ich den inhalt auf der x und y Achse verschieben kann*/
   justify-content: flex-end; /*damit ich den inhalt auf der x Achse verschieben kann*/
   align-items: flex-end; /*damit ich den inhalt auf der y Achse verschieben kann*/
   height: 30vh;
