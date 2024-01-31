@@ -1,0 +1,44 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  height: 70vh; /* 70% of the viewport height also des sichtbaren bereiches*/
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+td {
+  width: 25%;
+  text-align: center;
+  font-size: 40px;
+  background-color: #231f20;
+}
+
+td:hover {
+  background-color: #7ebdc2;
+  cursor: pointer;
+}
+#resultArea {
+  position: flex; /*damit ich den inhalt auf der x und y Achse verschieben kann*/
+  justify-content: flex-end; /*damit ich den inhalt auf der x Achse verschieben kann*/
+  align-items: flex-end; /*damit ich den inhalt auf der y Achse verschieben kann*/
+  height: 30vh;
+  background-color: #4a4143;
+  color: white;
+  font-size: 50px;
+  padding: 25px;
+  box-sizing: border-box; /*damit der padding nicht die Höhe verändert*/
+}
+#result {
+  background-color: orange;
+}
+#result:hover {
+  background-color: rgb(245, 194, 100);
+  cursor: pointer;
+}
+.highlight {
+  background-color: rgb(25, 25, 25);
+}
