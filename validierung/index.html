@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="error"></div>
+    <form id="form" action="/" method="GET">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div>
+        <label for="password">Passwort</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <button type="submit">Speichern</button>
+    </form>
+  </body>
+</html>
