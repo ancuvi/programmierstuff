@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  font-family: poppins, sans-serif;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.card {
+  --padding: 1rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid #f0f0f0;
+  max-width: 300px;
+  overflow: hidden; /* die ecken vom bild würden über die runden ecken hinaus schauen, mit dieser funktion nicht mehr */
+}
+
+.card-header {
+  font-size: 1.5rem;
+  padding: var(--padding);
+  padding-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+.card-header.card-img {
+  padding: 0;
+  overflow: hidden; /* damit das bild nicht über den rand hinausgeht */
+}
+
+.card-header.card-img > img {
+  display: block; /* damit ich die breite und höhe einstellen kann */
+  width: 100%;
+  max-height: 200px; /* das bild wird nicht größer als 200px */
+  aspect-ratio: 16 / 9; /* das bild wird in einem 16:9 format dargestellt */
+  object-fit: cover; /* das bild wird so angpasst das es nicht verzogen aussieht. es wird nur ein ausschnitt von bild genommen das es zu 16:9 passt */
+  object-position: center; /* das bild wird in der mitte positioniert */
+  transition: 200ms transform ease-in-out; /* das bild wird beim hoveren vergrößert */
+}
+
+.card:hover > .card-header.card-img > img {
+  /* card wird gehovert und dann wird das bild vergrößert */
+  transform: scale(1.025);
+}
+
+.card-body {
+  font-size: 0.9rem;
+  padding: 0 var(--padding);
+}
+.card-footer {
+  margin-top: 1rem;
+  padding: var(--padding);
+  padding-top: 0;
+}
+.btn {
+  --color: hsl(200, 50%, 50%);
+  background: var(--color);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background: hsl(200, 50%, 60%);
+}
+
+.btn.btn-outline {
+  background: none;
+  border: 1px solid var(--color);
+  color: var(--color);
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus {
+  background: hsl(200, 50%, 90%);
+}
+
+.btn + .btn {
+  /* da es geschwister sind kann man sie damit ein bisschen bearbeiten */
+  margin-left: 0.5rem;
+}
+
+.card.card-shadow {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
