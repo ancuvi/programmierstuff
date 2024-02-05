@@ -10,10 +10,121 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+  width: 100vw; /* 100% der Viewport-Breite */
+  height: 100vh; /* 100% der Viewport-Höhe */
 }
+
 .emoji {
+  --emoji-size: 200px;
+
   margin: 1rem;
-  background-color: red;
-  width: 1rem;
-  height: 1rem;
+  width: var(--emoji-size);
+  height: var(--emoji-size);
+}
+
+.head {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #fdd835;
+  overflow: hidden; /* damit nichts über den rand der div hinausragt */
+  position: relative; /* weil alles, was in der div ist absolut positioniert werden soll */
+  z-index: -1;
+}
+
+.eyes {
+  position: absolute;
+  top: calc(var(--emoji-size) / 4);
+  left: calc(var(--emoji-size) / 2);
+  /*background-color: blueviolet;
+  width: 5rem;
+  height: 5rem; das ist die größe des augen-container 
+  die obere linke ecke des auges soll in der mitte des emojis sein, weil die augen in der mitte des kopfes sein sollen */
+}
+
+.eye {
+  position: absolute;
+  width: calc(var(--emoji-size) * 0.075);
+  height: calc(var(--emoji-size) * 0.15);
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.eye-left {
+  left: calc(
+    var(--emoji-size) * -0.2
+  ); /* muss negativ sein, weil das auge sonst nach rechts verschoben wird */
+}
+
+.eye-right {
+  right: calc(
+    var(--emoji-size) * -0.2
+  ); /* muss negativ sein, weil das auge sonst nach links verschoben wird */
+}
+
+.mouth {
+  position: absolute;
+  bottom: calc(var(--emoji-size) * 0.15);
+  left: calc(var(--emoji-size) * 0.5); /*die beiden müssen runter*/
+  transform: translateX(-50%); /* damit der smile in der mitte des kopfes ist */
+  background-color: black;
+}
+
+.smile {
+  --mouth-height: calc(var(--emoji-size) * 0.3);
+
+  width: calc(var(--emoji-size) * 0.6);
+  height: var(
+    --mouth-height
+  ); /* so ist wieder die linke obere ecke der Ankerpunkt */
+  border-radius: 5% 5% var(--mouth-height) var(--mouth-height); /* die ersten beiden werte sind für die oberen ecken, die letzten beiden für die unteren ecken */
+}
+
+.open-mouth {
+  width: calc(var(--emoji-size) * 0.25);
+  height: calc(var(--emoji-size) * 0.3);
+  border-radius: 50%;
+}
+
+.face-mask {
+  left: calc(var(--emoji-size) * 0.2);
+  transform: none;
+  width: calc(var(--emoji-size) * 0.6);
+  height: calc(var(--emoji-size) * 0.35);
+  border-radius: 10%;
+  background-color: #fff;
+  border: calc(var(--emoji-size) * 0.02) solid #999;
+}
+
+.strap {
+  position: absolute;
+  background-color: white;
+  border: calc(var(--emoji-size) * 0.02) solid #999;
+  width: calc(var(--emoji-size) * 0.5);
+  height: calc(var(--emoji-size) * 0.1);
+  z-index: -2;
+}
+
+.strap-top-left {
+  transform: rotate(20deg);
+  top: calc(var(--emoji-size) * -0.05);
+  left: calc(var(--emoji-size) * -0.4);
+}
+
+.strap-top-right {
+  transform: rotate(-20deg);
+  top: calc(var(--emoji-size) * -0.05);
+  right: calc(var(--emoji-size) * -0.4);
+}
+
+.strap-bottom-left {
+  transform: rotate(-20deg);
+  bottom: calc(var(--emoji-size) * -0.05);
+  left: calc(var(--emoji-size) * -0.4);
+}
+
+.strap-bottom-right {
+  transform: rotate(30deg);
+  bottom: calc(var(--emoji-size) * -0.05);
+  right: calc(var(--emoji-size) * -0.4);
 }
