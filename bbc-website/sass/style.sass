@@ -1,39 +1,7 @@
-// Basisvariablen
-$overlay-color: rgba(0, 0, 0, 0.5)
-$background-transition: opacity 0.3s ease-in-out
-$highlight-color: #e91e63
-$light-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-$faq-border-color: #cee1f8
-$text-color-dark: #3b566e
-$text-color-light: #6f8ba4
-$background-color-white: #ffffff
+@import "navbar"
+@import "basisvariablen"
+@import "herosektion"
 
-.hero-section
-  position: relative
-  height: 75vh // oder 100vh für volle Bildschirmhöhe
-  background: url("IHRE-BILD-URL") no-repeat center center
-  background-size: cover
-  .hero-overlay
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background: $overlay-color // schwarzes Overlay mit 50% Deckkraft
-  .hero-content
-    position: relative
-    z-index: 2 // stellt sicher, dass der Text über dem Overlay liegt
-    color: white
-    text-align: center
-    padding-top: 20%
-  .hero-video
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    object-fit: cover // Dies stellt sicher, dass das Video den Container ohne Verzerrung ausfüllt
-    z-index: 1
 
 .team-member-img
   width: 150px
@@ -47,30 +15,9 @@ $background-color-white: #ffffff
 .custom-padding-footer
   padding-top: 6rem
 
-.navbar
-  transition: $background-transition // sanfter Übergang für Opacity
-  &-fixed
-    position: fixed
-    top: -100px
-    width: 100%
-    background: rgba(255, 255, 255, 0.9) // Leicht transparentes Weiß
-    box-shadow: $light-box-shadow
-    z-index: 1000
-    opacity: 0 // Starten mit einer opacity von 0
-    transition: top 0.3s ease-in, $background-transition // sanfter Übergang für Opacity und Top
-    + .navbar-placeholder
-      display: block
-      height: 56px
-  &-visible
-    top: 0
-    opacity: 1 // Volle Opazität, wenn sichtbar
-
-.navbar-placeholder
-  display: none // Standardmäßig nicht anzeigen
-  height: 0 // Anfangshöhe
 
 .about-us-section
-  background-image: url(Images/Julien_blau_BG.png)
+  background-image: url(../Images/Julien_blau_BG.png)
   background-size: cover // Das Bild deckt den gesamten Bereich ab
   background-position: center // Zentriert das Bild
   background-repeat: no-repeat // Verhindert das Wiederholen des Bildes

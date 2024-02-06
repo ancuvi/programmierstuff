@@ -1,3 +1,30 @@
+.navbar {
+  transition: opacity 0.3s ease-in-out;
+}
+.navbar-fixed {
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0;
+  transition: top 0.3s ease-in, opacity 0.3s ease-in-out;
+}
+.navbar-fixed + .navbar-placeholder {
+  display: block;
+  height: 56px;
+}
+.navbar-visible {
+  top: 0;
+  opacity: 1;
+}
+
+.navbar-placeholder {
+  display: none;
+  height: 0;
+}
+
 .hero-section {
   position: relative;
   height: 75vh;
@@ -46,35 +73,8 @@
   padding-top: 6rem;
 }
 
-.navbar {
-  transition: opacity 0.3s ease-in-out;
-}
-.navbar-fixed {
-  position: fixed;
-  top: -100px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  opacity: 0;
-  transition: top 0.3s ease-in, opacity 0.3s ease-in-out;
-}
-.navbar-fixed + .navbar-placeholder {
-  display: block;
-  height: 56px;
-}
-.navbar-visible {
-  top: 0;
-  opacity: 1;
-}
-
-.navbar-placeholder {
-  display: none;
-  height: 0;
-}
-
 .about-us-section {
-  background-image: url(Images/Julien_blau_BG.png);
+  background-image: url(../Images/Julien_blau_BG.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

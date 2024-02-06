@@ -1,0 +1,23 @@
+@import "basisVariablen"
+  
+.navbar
+  transition: $background-transition // sanfter Übergang für Opacity
+  &-fixed
+    position: fixed
+    top: -100px
+    width: 100%
+    background: rgba(255, 255, 255, 0.9) // Leicht transparentes Weiß
+    box-shadow: $light-box-shadow
+    z-index: 1000
+    opacity: 0 // Starten mit einer opacity von 0
+    transition: top 0.3s ease-in, $background-transition // sanfter Übergang für Opacity und Top
+    + .navbar-placeholder
+      display: block
+      height: 56px
+  &-visible
+    top: 0
+    opacity: 1 // Volle Opazität, wenn sichtbar
+
+.navbar-placeholder
+  display: none // Standardmäßig nicht anzeigen
+  height: 0 // Anfangshöhe
