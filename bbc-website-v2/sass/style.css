@@ -1,0 +1,148 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333333;
+  min-height: 200vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 10000;
+}
+nav.sticky {
+  padding: 10px 100px;
+  background: #ffffff;
+}
+nav.sticky .logo img {
+  content: url(../images/Logo/BBC_Logo_vektorBBC_schwarz.png);
+}
+nav.sticky ul li a {
+  color: #333333;
+}
+nav.sticky .toggle_btn {
+  color: #333333;
+}
+nav .logo {
+  position: relative;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+nav .logo img {
+  width: 50px;
+  height: 50px;
+}
+nav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  position: relative;
+  list-style: none;
+}
+nav ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+nav .toggle_btn {
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.show {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  nav ul {
+    display: none;
+  }
+  nav .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: none;
+  }
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url(../images/breake_bg.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.container_hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px 50px;
+  background: rgba(60, 60, 60, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.container_hero .überschrift_1 {
+  color: #ffffff;
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.container_hero .überschrift_2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.container_hero button {
+  padding: 10px 40px;
+  margin: 40px 0 0 0;
+  border: none;
+  border-radius: 10px;
+  background: #ff5733;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.container_hero button:hover {
+  background: #e53935;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,76 @@
+nav
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    transition: 0.6s
+    padding: 40px 100px
+    z-index: 10000 // das hab ich genau berechnet
+    &.sticky
+        padding: 10px 100px
+        background: $bg_white
+        .logo img
+            content: url(../images/Logo/BBC_Logo_vektorBBC_schwarz.png)
+        ul li a
+            color: $bg_grey
+        .toggle_btn
+            color: $bg_grey
+
+    .logo
+        position: relative
+        font-weight: 700
+        color: $text_white
+        text-decoration: none
+        font-size: 2em
+        text-transform: uppercase
+        letter-spacing: 2px
+        transition: 0.6s
+        img
+            width: 50px
+            height: 50px
+    ul
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        li
+            position: relative
+            list-style: none
+            a
+                position: relative
+                margin: 0 15px
+                text-decoration: none
+                color: $text_white
+                letter-spacing: 2px
+                font-weight: 500px
+                transition: 0.6s
+    .toggle_btn
+        color: $text_white
+        font-size: 1.5rem
+        cursor: pointer
+        display: none
+
+.dropdown_menu 
+  display: none
+  position: fixed // Damit das Dropdown beim Scrollen an der richtigen Stelle bleibt.
+  width: 100% // oder eine spezifische Breite, je nach Design.
+  top: 60px // Abstand von der oberen Seite, sollte der Höhe der Navigationsleiste entsprechen.
+  left: 0
+  background: $bg_white 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1) //Schatten.
+
+.show 
+        display: block
+
+// Responsive
+@media (max-width: 991px)
+    nav 
+        ul
+            display: none
+        .toggle_btn
+            display: block
+    .dropdown_menu 
+      display: none // Verstecke das Dropdown-Menü, bis es getoggled wird.
