@@ -1,39 +1,57 @@
 .banner
-    position: relative
+  position: relative
+  filter: brightness(50%)
+  img
     width: 100%
-    height: 700px
-    background: url(../images/breake_bg.webp)
-    background-size: cover 
-    background-position: center
+    height: 800px
+    object-fit: cover
+    position: relative
+    z-index: -1
 
 .container_hero
     position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    text-align: center
-    padding: 10px 50px
-    background: $überschrift_bg
-    backdrop-filter: blur(10px)
-    border-radius: 20px
-
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     .überschrift_1
+        margin-top: 250px
+        width: 100%
+        text-align: center
         color: $text_white
-        font-size: 4rem
-        text-shadow: 2px 2px 2px  rgba(0,0,0,0.5)
+        font-size: 5rem
+        letter-spacing: 5px
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
     .überschrift_2
+        margin-top: 20px
+        width: 100%
+        text-align: center
         color: $text_white
         font-size: 1.5rem
-        text-shadow: 2px 2px 2px  rgba(0,0,0,0.5)
-    button
-        padding: 10px 40px
-        margin: 40px 0 0 0
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    .magnatic-container
         border: none
-        border-radius: 10px
-        background: $prim_orange
-        color: $text_white
-        font-size: 1.2rem
+        background-color: transparent
+        position: relative
+        padding: $button_size * 0.8 $button_size * 1
+        margin-top: 0px
+        display: flex
+        justify-content: center
+        align-items: center
         cursor: pointer
-        transition: 0.6s
-        &:hover
-            background: $prim_red
+        .magnatic-element
+            z-index: 2
+            font-size: 1.3rem
+            color: $text_white
+        .magnatic-background
+            background-color: $prim_orange
+            width: $button_size * 1.4
+            height: $button_size * 0.6
+            position: absolute
+            z-index: 1
+            border-radius: $button_size * 0.2
+            pointer-events: none
+            box-shadow: 0px $button_size * 0.3 $button_size 0px rgba($prim_orange,0.95)

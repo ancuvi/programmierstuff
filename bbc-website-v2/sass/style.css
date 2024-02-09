@@ -103,46 +103,67 @@ nav .toggle_btn {
 }
 .banner {
   position: relative;
+  filter: brightness(50%);
+}
+.banner img {
   width: 100%;
-  height: 700px;
-  background: url(../images/breake_bg.webp);
-  background-size: cover;
-  background-position: center;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: -1;
 }
 
 .container_hero {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 10px 50px;
-  background: rgba(60, 60, 60, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .container_hero .überschrift_1 {
+  margin-top: 250px;
+  width: 100%;
+  text-align: center;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 5rem;
+  letter-spacing: 5px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .container_hero .überschrift_2 {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
   color: #ffffff;
   font-size: 1.5rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.container_hero button {
-  padding: 10px 40px;
-  margin: 40px 0 0 0;
+.container_hero .magnatic-container {
   border: none;
-  border-radius: 10px;
-  background: #ff5733;
-  color: #ffffff;
-  font-size: 1.2rem;
+  background-color: transparent;
+  position: relative;
+  padding: 5.6rem 7rem;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: 0.6s;
 }
-.container_hero button:hover {
-  background: #e53935;
+.container_hero .magnatic-container .magnatic-element {
+  z-index: 2;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+.container_hero .magnatic-container .magnatic-background {
+  background-color: #ff5733;
+  width: 9.8rem;
+  height: 4.2rem;
+  position: absolute;
+  z-index: 1;
+  border-radius: 1.4rem;
+  pointer-events: none;
+  box-shadow: 0px 2.1rem 7rem 0px rgba(255, 87, 51, 0.95);
 }/*# sourceMappingURL=style.css.map */
