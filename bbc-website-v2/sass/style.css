@@ -169,21 +169,17 @@ nav .toggle_btn {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
-  width: 100%;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  aligh-items: start;
+  padding: 80px 100px;
 }
 .cards:hover .card {
   background: radial-gradient(100rem circle at var(--xPos) var(--yPos), #ff5733, transparent 15%);
 }
 .cards .card {
-  width: 20rem;
-  height: 15rem;
+  max-width: 300px;
   background: radial-gradient(150rem circle at 0 0, rgba(255, 87, 51, 0), transparent 0%);
   border-radius: 0.5rem;
   display: flex;
@@ -218,4 +214,23 @@ nav .toggle_btn {
   transition: all 0.25s;
   height: calc(100% - 0.1rem);
   width: calc(100% - 0.1rem);
+}
+.cards .card .card-content .card-header {
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+.cards .card .card-content .card-header.card-img {
+  padding: 0;
+  overflow: hidden;
+}
+.cards .card .card-content .card-header.card-img > img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=style.css.map */

@@ -1,18 +1,24 @@
 .cards
-    display: flex
-    flex-wrap: wrap
-    flex-direction: row
-    justify-content: center
-    align-items: center
-    gap: 8rem
-    width: 100%
-    padding: 2rem
+    // display: flex
+    // flex-wrap: wrap
+    // flex-direction: row
+    // justify-content: center
+    // align-items: center
+    // gap: 8rem
+    // width: 100%
+    // padding: 2rem
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 3rem
+    aligh-items: start
+    padding: 80px 100px
     &:hover
         .card
             background: radial-gradient(100rem circle at var(--xPos) var(--yPos), rgba($prim_orange, 1), transparent 15%)
     .card
-        width: 20rem
-        height: 15rem
+        // width: 20rem
+        // height: 15rem
+        max-width: 300px ////////
         background: radial-gradient(150rem circle at 0 0, rgba($prim_orange, 0), transparent 0%)
         border-radius: 0.5rem
         display: flex
@@ -43,3 +49,19 @@
             transition: all 0.25s
             height: calc(100% - 0.1rem)
             width: calc(100% - 0.1rem)
+            .card-header
+                padding: 1rem
+                padding-bottom: 0
+                margin-bottom: 0.5rem
+                &.card-img
+                    padding: 0
+                    overflow: hidden
+                    > img
+                        display: block
+                        width: 100%
+                        max-height: 200px
+                        aspect-ratio: 16 / 9
+                        object-fit: cover
+                        object-position: center
+            .card-body
+            .card-footer
