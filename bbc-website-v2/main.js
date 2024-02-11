@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll(".magnatic-container");
 const time = 150;
+const wrapper = document.querySelector(".cards");
+const cards = document.querySelectorAll(".card");
 
 // Navbar beim Scrollen fixieren
 window.addEventListener("scroll", function () {
@@ -14,48 +16,60 @@ buttons.forEach((elm) => {
   elm.addEventListener("mouseleave", end);
 });
 
-function getChilds($event) {
+function getChilds($event_button) {
   return {
-    background: $event.target.querySelector(".magnatic-background"),
-    element: $event.target.querySelector(".magnatic-element"),
+    background: $event_button.target.querySelector(".magnatic-background"),
+    element: $event_button.target.querySelector(".magnatic-element"),
   };
 }
 
-function move($event) {
-  const x = $event.layerX - $event.target.clientWidth / 2;
-  const y = $event.layerY - $event.target.clientHeight / 2;
-  const { background, element } = getChilds($event);
+function move($event_button) {
+  const x = $event_button.layerX - $event_button.target.clientWidth / 2;
+  const y = $event_button.layerY - $event_button.target.clientHeight / 2;
+  const { background, element } = getChilds($event_button);
 
   background.style.transform = `translate(${x / 6}px, ${y / 6}px)`; // wenn 6 auf 4 geändert wird, dann bewegt sich der Hintergrund schneller
   element.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
 }
 
-function startAnimation($event) {
-  const { background, element } = getChilds($event);
+function startAnimation($event_button) {
+  const { background, element } = getChilds($event_button);
   const transition = `all ${time}ms ease`;
   background.style.transition = transition;
   element.style.transition = transition;
 }
 
-function endAnimation($event) {
-  const { background, element } = getChilds($event);
+function endAnimation($event_button) {
+  const { background, element } = getChilds($event_button);
   setTimeout(() => {
     background.style.transition = "";
     element.style.transition = "";
   }, time);
 }
 
-function start($event) {
-  startAnimation($event);
-  endAnimation($event);
+function start($event_button) {
+  startAnimation($event_button);
+  endAnimation($event_button);
 }
 
-function end($event) {
-  const { background, element } = getChilds($event);
+function end($event_button) {
+  const { background, element } = getChilds($event_button);
 
-  startAnimation($event);
+  startAnimation($event_button);
   background.style.transform = `translate(0, 0)`;
   element.style.transform = `translate(0, 0)`;
 
-  endAnimation($event);
+  endAnimation($event_button);
 }
+
+// Event Karten animiert
+wrapper.addEventListener("mousemove", function ($event_events) {
+  cards.forEach((card) => {
+    const rect = card.getBoundingClientRect(); // Position des Karten-Elements im Viewport
+    const x = $event_events.clientX - rect.left; // Berechnet x-Position der Maus relativ zur Karte
+    const y = $event_events.clientY - rect.top; // Berechnet y-Position der Maus relativ zur Karte
+
+    card.style.setProperty("--xPos", `${x}px`);
+    card.style.setProperty("--yPos", `${y}px`);
+  });
+});
