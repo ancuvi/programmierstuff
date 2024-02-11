@@ -189,6 +189,8 @@ nav .toggle_btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  max-width: 100%;
   position: relative;
   transition: all 0.15s;
 }
