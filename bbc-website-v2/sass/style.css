@@ -287,8 +287,66 @@ nav .toggle_btn {
   z-index: -1;
 }
 .diagonal .wrapper_about {
-  max-width: 50rem;
+  max-width: 100rem;
   margin-inline: auto;
   padding-inline: 1rem;
   color: #ffffff;
+}
+
+.gallery {
+  width: 90%;
+  max-width: 100rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.3rem;
+}
+.gallery:hover {
+  cursor: none;
+}
+.gallery:hover .gallery-image:not(.gallery-image:hover) {
+  scale: 0.95;
+  opacity: 0.3;
+}
+.gallery .gallery-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  position: relative;
+  transition: 250ms all;
+}
+.gallery .gallery-image:hover img {
+  scale: 1.2;
+}
+.gallery .gallery-image:active {
+  scale: 0.9;
+}
+.gallery .gallery-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  scale: 1;
+  transition: 250ms all ease-ind;
+}
+
+.size, .cursor .cursor-content, .cursor {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cursor {
+  pointer-events: none;
+}
+.cursor .cursor-content {
+  display: grid;
+  place-items: center;
+}
+.cursor .cursor-content img {
+  width: 20%;
 }/*# sourceMappingURL=style.css.map */

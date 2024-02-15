@@ -1,0 +1,49 @@
+.gallery
+    width: 90%
+    max-width: $max_width
+    margin-inline: auto // margin-left: auto; margin-right: auto
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 0.3rem
+    &:hover
+        cursor: none
+        .gallery-image:not(.gallery-image:hover)
+            scale: 0.95
+            opacity: 0.3
+    .gallery-image
+        width: 100%
+        aspect-ratio: 16/9
+        overflow: hidden
+        border-radius: 0.3rem
+        position: relative
+        transition: 250ms all
+        &:hover
+            img
+                scale: 1.2
+        &:active
+            scale: 0.9
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            scale: 1
+            transition: 250ms all ease-ind
+
+.size
+    width: 60px
+    height: 60px
+    border-radius: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+.cursor
+    pointer-events: none
+    @extend .size
+    .cursor-content
+        display: grid
+        place-items: center
+        @extend .size
+        img
+            width: 20%
