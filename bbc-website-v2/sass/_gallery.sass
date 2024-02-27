@@ -1,6 +1,7 @@
 .gallery
     width: 90%
     max-width: $max_width
+    padding-block: $padding_sections
     margin-inline: auto // margin-left: auto; margin-right: auto
     display: grid
     grid-template-columns: 1fr 1fr 1fr
@@ -37,13 +38,3 @@
     position: absolute
     top: 0
     left: 0
-
-.cursor
-    pointer-events: none
-    @extend .size
-    .cursor-content
-        display: grid
-        place-items: center
-        @extend .size
-        img
-            width: 20%
