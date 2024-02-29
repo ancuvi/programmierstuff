@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll(".magnatic-container");
 const time = 150;
 const wrapper = document.querySelector(".cards");
 const cards = document.querySelectorAll(".card");
+const faqs = document.querySelectorAll(".faq");
 
 // Navbar beim Scrollen fixieren
 window.addEventListener("scroll", function () {
@@ -71,5 +72,11 @@ wrapper.addEventListener("mousemove", function ($event_events) {
 
     card.style.setProperty("--xPos", `${x}px`);
     card.style.setProperty("--yPos", `${y}px`);
+  });
+});
+
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
   });
 });

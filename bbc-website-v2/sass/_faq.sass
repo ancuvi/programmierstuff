@@ -1,0 +1,62 @@
+@keyframes fade
+    0% 
+        opacity: 0
+        transform: translateY(-10px)
+    100% 
+        opacity: 1
+        transform: translateY(0px)
+
+.faq-section
+    width: 60%
+    max-width: $max_width
+    margin-inline: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    .faq-title
+        color: $text_white
+        font-size: 2.5rem
+        margin-bottom: 20px
+    .faq-subtitle
+        color: lighten($text_grey, 20%)
+        font-size: 1.5rem
+        margin-bottom: 60px
+    .faq
+        max-width: 700px
+        margin-top: 2rem
+        padding-bottom: 2rem
+        border-bottom: 1px solid lighten($text_white, 10%)
+        cursor: pointer
+        color: $text_white
+        &.active .faq-answer
+            max-height: 300px
+            animation: fade 1s ease-in-out
+        &.active svg
+            transform: rotate(180deg)
+        .faq-question
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h3
+                font-size: 1.4rem
+            svg
+                transition: transform 0.3s ease-in
+        .faq-answer
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.3s ease
+            p
+                padding-top: 1rem
+                line-height: 1.6
+                font-size: 1.1rem
+    .more-questions
+        color: $text_grey
+        margin-top: 20px
+        padding-bottom: 130px
+        .faq-link
+            color: $prim_orange
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+    
+      

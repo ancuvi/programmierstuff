@@ -11,8 +11,41 @@
         transform: skewY(-5deg)
         z-index: -1
     .wrapper_about
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 60%
         max-width: $max_width
-        margin-inline: auto 
-        padding-inline: 1rem
+        margin-inline: auto
         color: $text_white
+        .content_about
+            width: 60%
+            .title_about
+                margin-bottom: 20px
+                font-size: 2.5rem
+                text-shadow: $schatten_cards
+            p
+                font-size: 1.3rem
+                text-shadow: $schatten_cards
+            .about_btn
+                display: inline-block
+                margin-top: 30px //20px abstand zum text
+                padding: 10px 20px
+                background-color: $prim_orange
+                color: $text_white
+                font-size: 1.2rem
+                border: none
+                border-radius: 5px
+                box-shadow: $schatten_cards
+                cursor: pointer
+                transition: background-color 0.3s ease
+                &:hover
+                    background-color: darken($prim_orange, 10%) //10% dunkler
+        .image_about
+            width: 40%
+            box-shadow: $schatten_cards
+            margin-left: 100px
+            img
+                width: 100%
+                height: auto
 
