@@ -27,6 +27,7 @@
             p
                 font-size: 1.3rem
                 text-shadow: $schatten_cards
+                text-align: justify
             .about_btn
                 display: inline-block
                 margin-top: 30px //20px abstand zum text
@@ -42,10 +43,13 @@
                 &:hover
                     background-color: darken($prim_orange, 10%) //10% dunkler
         .image_about
-            width: 40%
+            width: 80%
             box-shadow: $schatten_cards
             margin-left: 100px
+            border-radius: 10px
+            overflow: hidden
             img
                 width: 100%
                 height: auto
+                margin-bottom: -10px  //damit unter dem bild kein gradient rand ist
 
